@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="640.0" spacing="20.0" style="-fx-background-color: #c7d8e4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.salonchik.SalonchikOrder">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <TextField fx:id="user" text="0" visible="false" />
+
+   <GridPane prefWidth="600.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+     </columnConstraints>
+     <rowConstraints>
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints minHeight="30.0" />
+         <RowConstraints />
+     </rowConstraints>
+      <children>
+          <Label text="Номер:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+          <TextField fx:id="numb" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+          <Label text="Дата:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+          <TextField fx:id="date" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+          <Label text="Аллергия:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+          <TextField fx:id="allerg" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+          <Label text="Услуга:" GridPane.rowIndex="5" />
+          <ComboBox fx:id="service" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+          <Label text="Описание маникюра:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+          <TextField fx:id="desM" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+          <Label text="Стоимость:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+          <TextField fx:id="price" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+          <Label text="Время записи:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+          <TextField fx:id="time" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+          <Label text="Статус:" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+          <TextField fx:id="stat" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+          <Label text="Мастер:" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+          <TextField fx:id="master" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+         <Label prefHeight="18.0" prefWidth="287.0" text="*При изменении услуги, цену уточняйте у сотрудников" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <font>
+               <Font name="System Italic" size="10.0" />
+            </font>
+         </Label>
+      </children>
+   </GridPane>
+
+    <Button onAction="#onSaveButtonClick" text="Сохранить" />
+    <Button onAction="#onDeleteButtonClick" text="Удалить" />
+
+</VBox>

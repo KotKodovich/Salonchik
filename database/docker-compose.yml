@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  mariadb:
+    image: mysql:8.0 # mariadb:11.5.2
+    ports:
+      - "13306:3306"
+    command:
+      --init-file /data/application/init.sql
+    environment:
+      MYSQL_DATABASE: Salon
+      MYSQL_PASSWORD: changeme
+      MYSQL_USER: javafxTest
+      MYSQL_ROOT_PASSWORD: changeme
+    volumes:
+      - C:/mariadb:/var/lib/mysql
+      - C:/Users/Honor/Desktop/Гутянская/КУРСОВАЯ/БД и Проект/Salonchik/Salonchik/database/init.sql:/data/application/init.sql
+
+    # network_mode: "host"
