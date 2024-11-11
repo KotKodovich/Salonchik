@@ -7,10 +7,11 @@ services:
     command:
       --init-file /data/application/init.sql
     environment:
-      MYSQL_DATABASE: Salon
-      MYSQL_PASSWORD: changeme
+      MYSQL_DATABASE: javafxTest
       MYSQL_USER: javafxTest
+      MYSQL_PASSWORD: changeme
       MYSQL_ROOT_PASSWORD: changeme
+      MYSQL_ROOT_USER: javafxTest
     volumes:
       - C:/mariadb:/var/lib/mysql
       - C:/Users/Honor/Desktop/Гутянская/КУРСОВАЯ/БД и Проект/Salonchik/Salonchik/database/init.sql:/data/application/init.sql
